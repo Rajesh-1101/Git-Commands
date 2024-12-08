@@ -1,0 +1,92 @@
+## Useful Git Commands List  
+
+### Basic Commands  
+| Command                      | Description                                    |  
+|----------------------------------|----------------------------------------------------|  
+| `git init`                       | Initialize a local Git repository                 |  
+| `git clone repo_url`             | Clone a public repository                         |  
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Clone a private repository         |  
+| `git status`                     | Check the status of the repository                |  
+| `git add [file-name]`            | Add a file to the staging area                    |  
+| `git add -A`                     | Add all new and changed files to the staging area |  
+| `git commit -m "[commit message]"` | Commit changes with a message                    |  
+
+---
+
+### Branch Management  
+| Command                             | Description                                           |  
+|-----------------------------------------|-----------------------------------------------------------|  
+| `git branch`                            | List all branches (current branch marked with `*`)       |  
+| `git branch -a`                         | List all branches (local and remote)                      |  
+| `git branch [branch name]`              | Create a new branch                                       |  
+| `git branch -d [branch name]`           | Delete a branch                                           |  
+| `git branch -D [branch name]`           | Force delete a branch                                     |  
+| `git branch -m [old branch name] [new branch name]` | Rename a branch                                   |  
+
+---
+
+### Switching and Checking Out Branches  
+| Command                              | Description                                           |  
+|------------------------------------------|-----------------------------------------------------------|  
+| `git checkout [branch name]`             | Switch to a branch                                        |  
+| `git checkout -b [branch name]`          | Create a new branch and switch to it                     |  
+| `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it           |  
+| `git checkout -`                         | Switch to the previously checked-out branch              |  
+
+---
+
+### Merging and Stashing  
+| Command                    | Description                                           |  
+|--------------------------------|-----------------------------------------------------------|  
+| `git merge [branch name]`      | Merge a branch into the active branch                     |  
+| `git merge [source branch] [target branch]` | Merge a branch into a target branch                  |  
+| `git stash`                    | Stash changes in a dirty working directory               |  
+| `git stash clear`              | Remove all stashed entries                               |  
+
+---
+
+### Push and Pull Commands  
+| Command                              | Description                                           |  
+|------------------------------------------|-----------------------------------------------------------|  
+| `git push origin [branch name]`          | Push a branch to a remote repository                     |  
+| `git push -u origin [branch name]`       | Push changes and set upstream branch                     |  
+| `git push`                               | Push changes to the remembered branch                    |  
+| `git push origin --delete [branch name]` | Delete a remote branch                                   |  
+| `git pull`                               | Update local repository to the latest commit             |  
+| `git pull origin [branch name]`          | Pull changes from a remote branch                       |  
+
+---
+
+### Remote Management  
+| Command                              | Description                                           |  
+|------------------------------------------|-----------------------------------------------------------|  
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository             |  
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Update a remote repository URL |  
+
+---
+
+### Viewing Logs and Changes  
+| Command               | Description                           |  
+|---------------------------|-------------------------------------------|  
+| `git log`                | View changes                              |  
+| `git log --summary`      | View detailed changes                     |  
+| `git log --oneline`      | View changes briefly                      |  
+| `git diff [source branch] [target branch]` | Preview changes before merging          |  
+
+---
+
+### Configuration  
+| Command                              | Description                                           |  
+|------------------------------------------|-----------------------------------------------------------|  
+| `git config --global user.name "your_username"` | Set global username                          |  
+| `git config --global user.email "your_email@example.com"` | Set global email ID                     |  
+| `git config --global --list`            | View global configurations                              |  
+
+---
+
+### Advanced Commands  
+| Command                              | Description                                           |  
+|------------------------------------------|-----------------------------------------------------------|  
+| `git revert [commit-id]`                 | Revert changes made by a specific commit                 |  
+| `git difftool`                           | Show differences between changes and HEAD                |  
+| `git mergetool`                          | Launch a merge tool to resolve conflicts                 |  
